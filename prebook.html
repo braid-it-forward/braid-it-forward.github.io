@@ -2,7 +2,7 @@
     <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Braiding Project</title>
+    <title>Braid it Forward</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,6 +82,34 @@
       }
     </style>
   </head>
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex items-center space-x-2 text-yerrrr">
+        <img class="w-13 h-10 rounded-xl bg-pinkytoe" src="imgs/logo-final.png"></img>
+        <span id="intro" class="text-xl font-bold text-yerrrr"></span>
+      </a>
+      <nav class="hidden md:flex space-x-6 font-semibold items-center text-bottom text-black text-lg">
+        <a href="/prebook.html" class="hover:text-yerrrr">Before Appointment</a>
+        <a href="/workinprogress.html" class="hover:text-yerrrr">Aftercare</a>
+        <a href="/workinprogress.html" class="hover:text-yerrrr">Product Recommendations</a>
+        <a href="#donation" class="hover:text-yerrrr">Donate to Us</a>
+        <a href="#contact" class="px-4 py-2 bg-yerrrr text-white rounded-full hover:bg-pinkytoe">Book Now</a>
+      </nav>
+    </div>
+  </header>
+  <script>
+      const text = "Braid it Forward";
+      let i = 0;
+
+      function typeWriter() {
+        if (i < text.length) {
+          document.getElementById("intro").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 100);
+        }
+      }
+      window.onload = typeWriter;
+    </script>
   <body class="bg-whoville text-3xl text-white">
     <section class="flex flex-col items-center justify-center min-h-screen text-center text-3xl">
         <h6 class="text-3xl font-bold mb-6">
