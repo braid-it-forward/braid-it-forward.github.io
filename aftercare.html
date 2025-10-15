@@ -1,8 +1,9 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Braiding Project</title>
+    <title>After Your Appointment | Braid it Forward</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,68 +19,130 @@
         --yerrrr: #fb90b7;
       }
 
-      /* Backgrounds */
-      .bg-pinkytoe {
-        background-color: var(--pinkytoe);
-      }
+      .bg-pinkytoe { background-color: var(--pinkytoe); }
+      .bg-blueymomma { background-color: var(--blueymomma); }
+      .bg-lorax { background-color: var(--lorax); }
+      .bg-whoville { background-color: var(--whoville); }
+      .bg-yerrrr { background-color: var(--yerrrr); }
 
-      .bg-blueymomma {
-        background-color: var(--blueymomma);
-      }
-
-      .bg-lorax {
-        background-color: var(--lorax);
-      }
-
-      .bg-whoville {
-        background-color: var(--whoville);
-      }
-
-      .bg-yerrrr {
-        background-color: var(--yerrrr);
-      }
-
-      /* Texts */
-      .text-pinkytoe {
-        color: var(--pinkytoe);
-      }
-
-      .text-blueymomma {
-        color: var(--blueymomma);
-      }
-
-      .text-lorax {
-        color: var(--lorax);
-      }
-
-      .text-whoville {
-        color: var(--whoville);
-      }
-
-      .text-yerrrr {
-        color: var(--yerrrr);
-      }
-
-      /* Borders */
-      .border-pinkytoe {
-        border-color: var(--pinkytoe);
-      }
-
-      .border-blueymomma {
-        border-color: var(--blueymomma);
-      }
-
-      .border-lorax {
-        border-color: var(--lorax);
-      }
-
-      .border-whoville {
-        border-color: var(--whoville);
-      }
-
-      .border-yerrrr {
-        border-color: var(--yerrrr);
-      }
+      .text-pinkytoe { color: var(--pinkytoe); }
+      .text-blueymomma { color: var(--blueymomma); }
+      .text-lorax { color: var(--lorax); }
+      .text-whoville { color: var(--whoville); }
+      .text-yerrrr { color: var(--yerrrr); }
     </style>
   </head>
+
+  <body class="bg-blueymomma">
+    <!-- Navbar -->
+    <header class="bg-white shadow sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <a href="index.html" class="flex items-center space-x-2">
+          <img class="h-10 w-auto rounded-xl bg-pinkytoe" src="imgs/logo-final.png" alt="Logo" />
+          <span id="intro" class="text-xl font-bold text-yerrrr"></span>
+        </a>
+        <nav class="hidden md:flex items-center space-x-6 font-semibold text-gray-800 leading-none">
+          <a href="/prebook.html" class="hover:text-yerrrr">Before Appointment</a>
+          <a href="/aftercare.html" class="text-yerrrr">Aftercare</a>
+          <a href="/recommendations.html" class="hover:text-yerrrr">Product Recommendations</a>
+          <a href="/index.html#donation" class="hover:text-yerrrr">Donate to Us</a>
+          <a href="/index.html#contact" class="px-4 py-2 bg-yerrrr text-white rounded-full hover:bg-pinkytoe">Book Now</a>
+        </nav>
+      </div>
+    </header>
+
+    <script>
+      const text = "Braid it Forward";
+      let i = 0;
+      function typeWriter() {
+        if (i < text.length) {
+          document.getElementById("intro").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 100);
+        }
+      }
+      window.onload = typeWriter;
+    </script>
+
+    <!-- Page Content -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-8 md:px-16">
+        <h1 class="text-5xl text-yerrrr font-bold mb-8 text-center">After Your Appointment</h1>
+        <p class="text-2xl text-gray-700 mb-12 text-center font-medium">
+          Thank you for trusting <span class="text-yerrrr font-bold">Braid it Forward!</span>  
+          Here’s everything you need to know to keep your braids beautiful, your scalp healthy, and your hair thriving after your appointment. ✨
+        </p>
+
+        <!-- Daily & Weekly Care -->
+        <section class="mb-16">
+          <h2 class="text-3xl text-lorax font-bold mb-4">Daily & Weekly Care</h2>
+          <ul class="list-disc pl-6 text-gray-700 text-lg space-y-2">
+            <li>Moisturize your scalp every few days with a lightweight oil or braid spray (jojoba, aloe, or rose water sprays are great).</li>
+            <li>Wrap your hair at night with a satin or silk scarf or bonnet to prevent frizz and breakage.</li>
+            <li>Sleep on a silk or satin pillowcase for extra protection.</li>
+            <li>Avoid heavy oils and products that can cause build-up.</li>
+          </ul>
+        </section>
+
+        <!-- Scalp Health -->
+        <section class="mb-16">
+          <h2 class="text-3xl text-lorax font-bold mb-4">Scalp Health</h2>
+          <ul class="list-disc pl-6 text-gray-700 text-lg space-y-2">
+            <li>If your scalp feels itchy or dry, use a soothing braid spray or witch hazel on a cotton pad to gently clean the area.</li>
+            <li>Don’t scratch with your nails — instead, pat or massage gently with your fingertips.</li>
+            <li>Keep your scalp clean and hydrated — it’s okay to lightly cleanse every 1–2 weeks with diluted shampoo or apple cider vinegar rinse.</li>
+          </ul>
+        </section>
+
+        <!-- Longevity Tips -->
+        <section class="mb-16">
+          <h2 class="text-3xl text-lorax font-bold mb-4">Longevity Tips</h2>
+          <ul class="list-disc pl-6 text-gray-700 text-lg space-y-2">
+            <li>Cover your hair when cooking (especially with grease or smoke).</li>
+            <li>Avoid pulling braids into tight ponytails or buns, especially during the first week.</li>
+            <li>If you see frizz or flyaways, apply mousse or braid foam and tie it down with a scarf for 10–15 minutes.</li>
+            <li>Use edge control or light gel sparingly to touch up edges when needed.</li>
+          </ul>
+        </section>
+
+        <!-- When to Take Them Out -->
+        <section class="mb-16">
+          <h2 class="text-3xl text-lorax font-bold mb-4">When to Take Them Out</h2>
+          <ul class="list-disc pl-6 text-gray-700 text-lg space-y-2">
+            <li>Recommended wear time: <span class="font-semibold text-yerrrr">6–8 weeks maximum</span> (depending on your style).</li>
+            <li>Leaving braids in too long can cause matting, breakage, and thinning edges.</li>
+            <li>Take your time removing them — don’t rush or yank! Use conditioner and water to help detangle gently.</li>
+          </ul>
+        </section>
+
+        <!-- After Braids -->
+        <section class="mb-16">
+          <h2 class="text-3xl text-lorax font-bold mb-4">After Braids: Hair Recovery</h2>
+          <ul class="list-disc pl-6 text-gray-700 text-lg space-y-2">
+            <li>Detangle gently before washing.</li>
+            <li>Shampoo twice, condition deeply, and let your hair rest before your next install.</li>
+            <li>Use a deep conditioning hair mask to restore strength and moisture.</li>
+          </ul>
+        </section>
+
+        <!-- Keep in Touch -->
+        <section class="mb-16 text-center">
+          <h2 class="text-3xl text-lorax font-bold mb-4">Keep in Touch</h2>
+          <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            Share your braid photos, tag <a href="https://www.instagram.com/braiditforward" class="font-bold text-yerrrr">@BraidItForward</a>, and let me know how your style is holding up!  
+            Every post helps spread the mission of making every client — especially our foster care girls — feel beautiful, confident, and cared for. 🤍
+          </p>
+        </section>
+
+        <p class="text-xl text-center text-yerrrr font-semibold mt-12">
+          Thank you again for being part of the <span class="font-bold">Braid It Forward</span> family! 💕
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6 text-center text-yerrrr font-semibold">
+      © 2025 Braid it Forward · All rights reserved
+    </footer>
+  </body>
 </html>
