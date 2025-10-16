@@ -8,15 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
       body {
         font-family: 'Poppins', sans-serif;
-        /* Color variables */
         --pinkytoe: #ffdde4;
         --blueymomma: #d3f1e9;
         --lorax: #f89651;
         --whoville: #fbf4c2;
         --yerrrr: #fb90b7;
+        overflow-x: hidden;
       }
 
       .bg-pinkytoe { background-color: var(--pinkytoe); }
@@ -41,17 +42,23 @@
           <img class="h-10 w-auto rounded-xl bg-pinkytoe" src="imgs/logo-final.png" alt="Logo" />
           <span id="intro" class="text-xl font-bold text-yerrrr"></span>
         </a>
-        <nav class="hidden md:flex items-center space-x-6 font-semibold text-gray-800 leading-none">
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-yerrrr text-3xl focus:outline-none">☰</button>
+
+        <!-- Navigation Links -->
+        <nav id="menu" class="hidden md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 font-semibold text-gray-800 leading-none">
           <a href="/prebook.html" class="hover:text-yerrrr">Before Appointment</a>
           <a href="/aftercare.html" class="hover:text-yerrrr">Aftercare</a>
           <a href="/recommendations.html" class="hover:text-yerrrr">Product Recommendations</a>
           <a href="/index.html#donation" class="hover:text-yerrrr">Donate to Us</a>
-          <a href="/index.html#contact" class="px-4 py-2 bg-yerrrr text-white rounded-full hover:bg-pinkytoe">Book Now</a>
+          <a href="/index.html#contact" class="px-4 py-2 bg-yerrrr text-white rounded-full hover:bg-pinkytoe transition">Book Now</a>
         </nav>
       </div>
     </header>
 
     <script>
+      // Typing animation
       const text = "Braid it Forward";
       let i = 0;
       function typeWriter() {
@@ -62,68 +69,76 @@
         }
       }
       window.onload = typeWriter;
+
+      // Mobile menu toggle
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
     </script>
 
     <!-- Page Content -->
-    <section class="py-20 bg-white">
-      <div class="max-w-5xl mx-auto px-6">
-        <h1 class="text-5xl text-yerrrr font-bold mb-6 text-center">Before Your Appointment</h1>
-        <p class="text-2xl text-gray-700 mb-10 text-center font-medium">
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-10">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl text-yerrrr font-bold mb-6 text-center">Before Your Appointment</h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-gray-700 mb-10 text-center font-medium leading-relaxed">
           Hey <span class="text-yerrrr">beautiful</span>! I’m so excited to have you in my chair. To make sure your braids come out perfectly and your appointment runs smoothly,
           please take a moment to read through these quick prep steps before you arrive. 💖
         </p>
-        <section>
-            <div class="space-y-10">
-            <div>
-                <h2 class="text-3xl text-lorax font-bold mb-3">Hair Prep</h2>
-                <ul class="list-disc pl-6 text-gray-700 text-lg space-y-2">
-                <li>Please arrive with clean, detangled, and product-free hair 
-                  <span class="text-whoville"></span></li>
-                <li>Wash and condition your hair within 24 hours of your appointment.</li>
-                <li>A deep conditioning treatment is recommended for extra moisture.</li>
-                <li>Hair should be blown out or stretched unless you’ve booked a wash + blow-dry add-on.</li>
-                <li>If you’re unsure how to prep, feel free to message me — I’m happy to guide you!</li>
-                </ul>
-            </div>
-        </section>
-        <br>
+
+        <div class="space-y-12">
+          <!-- Hair Prep -->
           <div>
-            <h2 class="text-3xl text-lorax font-bold mb-3">Comfort & Courtesy</h2>
-            <ul class="list-disc pl-6 text-gray-700 text-lg space-y-2">
+            <h2 class="text-2xl sm:text-3xl text-lorax font-bold mb-3">Hair Prep</h2>
+            <ul class="list-disc pl-6 text-gray-700 text-base sm:text-lg space-y-2">
+              <li>Please arrive with clean, detangled, and product-free hair.</li>
+              <li>Wash and condition your hair within 24 hours of your appointment.</li>
+              <li>A deep conditioning treatment is recommended for extra moisture.</li>
+              <li>Hair should be blown out or stretched unless you’ve booked a wash + blow-dry add-on.</li>
+              <li>If you’re unsure how to prep, feel free to message me — I’m happy to guide you!</li>
+            </ul>
+          </div>
+
+          <!-- Comfort & Courtesy -->
+          <div>
+            <h2 class="text-2xl sm:text-3xl text-lorax font-bold mb-3">Comfort & Courtesy</h2>
+            <ul class="list-disc pl-6 text-gray-700 text-base sm:text-lg space-y-2">
               <li>This space is meant to feel calm, positive, and safe for everyone.</li>
               <li>You’re welcome to bring headphones, snacks, or a blanket for longer sessions.</li>
               <li>If you have a sensitive scalp or need breaks, just let me know — I’m always happy to pause.</li>
             </ul>
           </div>
 
-        <br>
-        <div>
-            <h2 class="text-3xl text-lorax font-bold mb-3">Payment</h2>
-            <ul class="list-disc pl-6 text-gray-700 text-lg space-y-2">
-                <li>We accept cash, Zelle, or Apple Pay.</li>
-                <li>Please have payment ready before your service starts to keep everything smooth and easy.</li>
-            </ul>
-        </div>
-        <br>
+          <!-- Payment -->
           <div>
-            <h2 class="text-3xl text-lorax font-bold mb-3">Aftercare Sneak Peek</h2>
-            <p class="text-lg text-gray-700">
+            <h2 class="text-2xl sm:text-3xl text-lorax font-bold mb-3">Payment</h2>
+            <ul class="list-disc pl-6 text-gray-700 text-base sm:text-lg space-y-2">
+              <li>We accept cash, Zelle, or Apple Pay.</li>
+              <li>Please have payment ready before your service starts to keep everything smooth and easy.</li>
+            </ul>
+          </div>
+
+          <!-- Aftercare -->
+          <div>
+            <h2 class="text-2xl sm:text-3xl text-lorax font-bold mb-3">Aftercare Sneak Peek</h2>
+            <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
               I’ll go over braid care tips before you leave, but you can also check out my
-              <a href="/aftercare.html" class="text-yerrrr font-bold underline hover:text-lorax">After Your Appointment</a>
+              <a href="/aftercare.html" class="text-yerrrr font-bold underline hover:text-lorax transition">After Your Appointment</a>
               page for details on how to keep your braids fresh and your scalp happy.
             </p>
           </div>
         </div>
 
-        <br>
-        <p class="text-xl text-center text-yerrrr font-semibold mt-16">
+        <p class="text-lg sm:text-xl text-center text-yerrrr font-semibold mt-16 leading-relaxed">
           Thank you for choosing <span class="font-bold">Braid It Forward</span> — We can’t wait to create something beautiful with you! 💕
         </p>
       </div>
-
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white py-6 text-center text-yerrrr font-semibold">© 2025 Braid it Forward · All rights reserved</footer>
+    <footer class="bg-white py-6 text-center text-yerrrr font-semibold">
+      © 2025 Braid it Forward · All rights reserved
+    </footer>
   </body>
 </html>
